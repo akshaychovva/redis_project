@@ -1,0 +1,14 @@
+<table>
+    <tr> 
+      <td>Name</td>
+      <td>Category</td>
+      <td>More Info</td>
+    </tr>
+    {% for recipe in recipies %}
+        <tr> 
+        <td>{{recipe.title}}</td>
+        <td>{{recipe.category.name}}</td>
+        <td><a href="{% url 'recipe_single' recipe.id %}">More Info</a></td>
+        </tr>
+    {% endfor %}
+  </table>
